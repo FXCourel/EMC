@@ -2,3 +2,13 @@
     font-family: varela;
     src: url("../assets/fonts/VarelaRound-Regular.otf");
 }
+
+@font-face {
+    font-family: raleway;
+    src: url("../assets/fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: raleway-extralight;
+    src: url("../assets/fonts/Raleway-ExtraLight.ttf");
+}
