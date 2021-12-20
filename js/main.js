@@ -33,35 +33,12 @@ function setContent(content){
 	};
 };
 
-function setTitle(title){
-	console.log('Setting title to',title)
-	if(title === 'DEFAULT'){
-		header_menu.style.top = '0vh';
-		header_title.style.top = '12vh';
-	}else{
-		header_title.innerHTML = title;
-		header_menu.style.top = '-12vh';
-		header_title.style.top = '0vh';
-	}
-
-};
-
-
-
 
 const overlay = document.querySelector('.header #menu-overlay');
 const nav_list = document.querySelectorAll('.header .menu');
 const wrap = document.querySelector('#main_wrap');
 const parties = document.querySelectorAll('#Dvpt section')
 
-parties.forEach((list) => {
-	list.addEventListener('mouseover', () => {
-		setTitle(list.querySelector('.section-title').innerHTML);
-	});
-	list.addEventListener('mouseout', () => {
-		setTitle('DEFAULT');
-	});
-});
 
 console.log(nav_list);
 nav_list.forEach((list) => {

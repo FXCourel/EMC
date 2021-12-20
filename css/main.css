@@ -113,6 +113,7 @@ p {
 }
 
 #main-menu{
+    height: 12vh;
     top: 0vh;
     display: flex;
     align-items: center;
