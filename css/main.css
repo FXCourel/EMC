@@ -6,6 +6,7 @@
     --border-color : #d4d4d4;
     --separator-color: #222;
     --h1 : 35px;
+    --h2 : 2em;
     --h3 : 1.5em;
     --text : 16px;
 }
@@ -22,18 +23,39 @@ body{
     margin: 0;
 }
 
-.header{
-    top: 0;
-    position: sticky;
+#main-menu{
     font-size: var(--h1);
     height: 12vh;
+    overflow-y: hidden;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    top: 0;
+    position: fixed;
+    font-size: var(--h1);
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.68);
-    margin-bottom: 3em;
+    height: 12vh;
     overflow-y: hidden;
+    width: 100%;
+    z-index: 10;
+    transition: ease 0.5s;
+}
+
+#fake-header{
+    top: 0;
+    height: 12vh;
+    width: 100%;
+    margin-bottom: 3em;
+
 }
 
 .menu{
@@ -48,7 +70,25 @@ body{
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);*/
 }
-    
+
+#trigger-on{
+    z-index: 8;
+    width: 100%;
+    height: 6vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#trigger-off{
+    z-index: 8;
+    width: 100%;
+    height: 5vh;
+    position: fixed;
+    top: 12vh;
+    left: 0;
+}
+
 .menu:hover {
     cursor: pointer;    
 }
@@ -70,6 +110,7 @@ body{
 
 #part-overlay{
     position: fixed;
+    z-index: 9;
     left: 0;
     top: 12vh;
     width: 20%;
@@ -112,24 +153,6 @@ p {
     margin-top: 1em;
 }
 
-#main-menu{
-    height: 12vh;
-    top: 0vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-#affichage-parties{
-    display: flex;
-    align-items: center;
-    top: 12vh;
-    height: 12vh;
-    padding-left: 10%;
-    color: var(--secondary-color);
-}
-
 #Intro{
     display: none;
 }
@@ -154,7 +177,23 @@ p {
     z-index: -1;
 }
 
-.glass .p{
+.section-title{
+    padding-top: 3vh;
+    background-color: var(--background-color);
+    top: 0;
+    z-index: 5;
+    position: sticky;
+    border-bottom-style: solid;
+    border-color: #00ccff;
+    margin-left: 2em;
+    text-transform: uppercase;
+    font-size: var(--h2);
+    margin-bottom: 1.5em;
+    font-family: raleway;
+    letter-spacing: 1px;
+}
+
+    .glass .p{
     font-size: var(--text);
     margin-left: auto;
     margin-right: auto;

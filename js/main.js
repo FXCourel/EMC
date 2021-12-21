@@ -6,6 +6,13 @@ const Conclu = document.querySelector('#Conclu');
 const header = document.querySelector('.header');
 const header_menu = document.querySelector('.header #main-menu');
 const header_title = document.querySelector('.header #affichage-parties');
+const triggeron = document.querySelector('#trigger-on');
+const triggeroff = document.querySelector('#trigger-off');
+const overlay = document.querySelector('.header #menu-overlay');
+const nav_list = document.querySelectorAll('.header .menu');
+const wrap = document.querySelector('#main_wrap');
+const parties = document.querySelectorAll('#Dvpt section');
+const fixed = header.clientHeight;
 
 function setContent(content){
 	console.log("Changing content to",content)
@@ -34,11 +41,29 @@ function setContent(content){
 };
 
 
-const overlay = document.querySelector('.header #menu-overlay');
-const nav_list = document.querySelectorAll('.header .menu');
-const wrap = document.querySelector('#main_wrap');
-const parties = document.querySelectorAll('#Dvpt section')
+triggeron.addEventListener('mouseover', () => {
+	if (localStorage.content === "Dvpt") {
+		header.style.top = '0';
+		part_overlay.style.top = '12vh';
+	};
+});
+triggeroff.addEventListener('mouseover', () => {
+	if (localStorage.content === "Dvpt" && window.pageYOffset >= fixed) {
+		header.style.top = 'calc(-12vh - 1px)';
+		part_overlay.style.top = '-1px';
+	};
+});
 
+
+function reloadMenu(){
+	if (window.pageYOffset >= fixed) {
+			header.style.top = 'calc(-12vh - 1px)';
+			part_overlay.style.top = '-1px';
+		} else {
+			header.style.top = '0';
+			part_overlay.style.top = '12vh'
+		};
+}
 
 console.log(nav_list);
 nav_list.forEach((list) => {
@@ -58,3 +83,5 @@ if(localStorage.content){
 }else{
 	setContent("Intro");
 }
+
+reloadMenu();
