@@ -56,7 +56,7 @@ triggeroff.addEventListener('mouseover', () => {
 
 
 function reloadMenu(){
-	if (window.pageYOffset >= fixed) {
+	if (localStorage.content === "Dvpt" && window.pageYOffset >= fixed) {
 			header.style.top = 'calc(-12vh - 1px)';
 			part_overlay.style.top = '-1px';
 		} else {
