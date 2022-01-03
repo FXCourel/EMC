@@ -224,6 +224,9 @@ p {
 }
 
 .separator{
+    margin-top: 2em;
+    position: absolute;
+    left: 0;
     width: 150%;
     height: 5em;
     background-color: var(--separator-color);
