@@ -23,13 +23,15 @@ function setContent(content){
 		Conclu.style.display = 'none';
 		part_overlay.style.left = '6.7%';
 		localStorage.content = "Intro";
+		return false;
 	}
 	else if(content == "Dvpt") {
 		Intro.style.display = 'none';
 		Dvpt.style.display = 'block';
 		Conclu.style.display = 'none';
 		part_overlay.style.left = '39.6%';
-		localStorage.content = "Dvpt";
+		localStorage.content = "Dvpt";ù
+		return false;
 	}
 	else if(content == "Conclu") {
 		Intro.style.display = 'none';
@@ -37,6 +39,7 @@ function setContent(content){
 		Conclu.style.display = 'block';
 		part_overlay.style.left = '72.5%';
 		localStorage.content = "Conclu";
+		return false;
 	};
 };
 
