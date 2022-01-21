@@ -15,8 +15,12 @@ const parties = document.querySelectorAll('#Dvpt section');
 const fixed = header.clientHeight;
 
 function setContent(content){
+	if(actual_content === content){
+		return false;
+	}
 	console.log("Changing content to",content)
 	actual_content = content;
+	window.scrollTo(0,0);
 	if(content == "Intro") {
 		Intro.style.display = 'block';
 		Dvpt.style.display = 'none';
@@ -68,7 +72,6 @@ function reloadMenu(){
 		};
 }
 
-console.log(nav_list);
 nav_list.forEach((list) => {
 	list.addEventListener('mouseover', () => {
 		let position = list.getBoundingClientRect();
