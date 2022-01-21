@@ -17,7 +17,7 @@ const fixed = header.clientHeight;
 function setContent(content){
 	if(actual_content === content){
 		return false;
-	}
+	}	
 	console.log("Changing content to",content)
 	actual_content = content;
 	window.scrollTo(0,0);
