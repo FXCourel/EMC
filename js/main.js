@@ -30,7 +30,7 @@ function setContent(content){
 		Dvpt.style.display = 'block';
 		Conclu.style.display = 'none';
 		part_overlay.style.left = '39.6%';
-		localStorage.content = "Dvpt";ù
+		localStorage.content = "Dvpt";
 		return false;
 	}
 	else if(content == "Conclu") {
