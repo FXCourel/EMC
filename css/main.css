@@ -1,6 +1,7 @@
 :root{
     --text-color : #e2e2e2;
-    --background-color : #3a3a3a;
+    --text-color-hover : #f2f2f2;
+    --background-color : #2e2e2e;
     --background-color-header : #e4e4e4;
     --secondary-color : rgb(197, 197, 197);
     --border-color : #d4d4d4;
@@ -8,7 +9,7 @@
     --h1 : 35px;
     --h2 : 2em;
     --h3 : 1.5em;
-    --text : 16px;
+    --text : 18px;
 }
 
 html{
@@ -136,6 +137,8 @@ p {
     cursor: default;
     padding-left: 2em;
     padding-right: 2em;
+    font-family: andalus;
+    line-height: 1.5em;
 }
 
 .italic {
@@ -155,6 +158,21 @@ p {
 
 #Intro{
     display: none;
+}
+
+#sommaire{
+    font-family: raleway;
+    font-size: 1.5em;
+    /* margin-left: 6em; */
+    line-height: 1.5em;
+}
+#sommaire li{
+    margin-left: 3em;
+    transition: all 0.25s;
+}
+#sommaire li:hover{
+    margin-left: 4em;
+    color: var(--text-color-hover);
 }
 
 #Dvpt{
@@ -193,7 +211,15 @@ p {
     letter-spacing: 1px;
 }
 
-    .glass .p{
+.subpart-title{
+    font-family: raleway;
+    font-size: var(--h3);
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.glass .p{
     font-size: var(--text);
     margin-left: auto;
     margin-right: auto;

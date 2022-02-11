@@ -12,3 +12,8 @@
     font-family: raleway-extralight;
     src: url("../assets/fonts/Raleway-ExtraLight.ttf");
 }
+
+@font-face {
+    font-family: andalus;
+    src: url("../assets/fonts/andlso.ttf");
+}
