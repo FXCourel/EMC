@@ -7,8 +7,8 @@
     --border-color : #d4d4d4;
     --separator-color: #222;
     --extra-color: #35b5f0;
-    --extra-color-dark: #304e5c;
-    --extra-color-darkest: #191f22;
+    --th: #184a6180;
+    --td: #1e2a3080;
     --h1 : 35px;
     --h2 : 35px;
     --h3 : 24px;
@@ -306,7 +306,7 @@ h4{
     overflow:hidden;
     padding:10px;
     word-break:normal;
-    background-color: var(--extra-color-darkest);
+    background-color: var(--td);
     border-color: var(--border-color);
     color: var(--text-color);
     text-align:center;
@@ -320,7 +320,7 @@ h4{
     overflow:hidden;
     padding:10px;
     word-break:normal;
-    background-color:var(--extra-color-dark);
+    background-color:var(--th);
     border-color: var(--border-color);
     color: var(--text-color);
     text-align:center;
