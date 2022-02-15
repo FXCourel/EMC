@@ -5,12 +5,22 @@
 
 @font-face {
     font-family: raleway;
-    src: url("../assets/fonts/Raleway-Regular.ttf");
+    src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");
 }
 
 @font-face {
     font-family: raleway-extralight;
-    src: url("../assets/fonts/Raleway-ExtraLight.ttf");
+    src: url("../assets/fonts/Raleway/Raleway-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: roboto;
+    src: url("../assets/fonts/Roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url("../assets/fonts/Roboto/Roboto-Medium.ttf");
 }
 
 @font-face {
