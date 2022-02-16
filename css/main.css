@@ -14,6 +14,7 @@
     --h3 : 24px;
     --h4 : 21px;
     --text : 17px;
+    --notes : 11px;
 }
 
 html{
@@ -144,6 +145,26 @@ p {
     font-family: roboto;
     line-height: 1.5em;
     text-indent: 2em;
+}
+
+.img{
+    font-size: var(--notes);
+}
+.img.right{
+    float: right;
+    margin-left: 3em;
+    margin-right: 1em;
+}
+.img.left{
+    float: left;
+    margin-right: 3em;
+    margin-left: 1em;
+}
+.img > img{
+    padding: 2em 2em 1em 2em; 
+}
+.img > div{
+    padding: 0 2em 2em 2em; 
 }
 
 .italic {
@@ -298,6 +319,12 @@ h3:target, h4:target {
     padding: 1em;
     width: 5em;
     height: 5em;
+}
+
+.src-text{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-indent: 0;
 }
 
 #T1{
