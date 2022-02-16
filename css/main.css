@@ -147,27 +147,27 @@ p {
     text-indent: 2em;
 }
 
-.imge{
+.img{
     font-size: var(--notes);
 }
 
-.imge.right{
+.img.right{
     float: right;
     margin-left: 3em;
     margin-right: 1em;
 }
 
-.imge.left{
+.img.left{
     float: left;
     margin-right: 3em;
     margin-left: 1em;
 }
 
-.imge > img{
+.img > img{
     padding: 2em 2em 1em 2em;
 }
 
-.imge > div{
+.img > div{
     padding: 0 2em 2em 2em; 
 }
 
