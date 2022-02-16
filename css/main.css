@@ -44,7 +44,7 @@ body{
     top: 0;
     position: fixed;
     font-size: var(--h1);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(185, 185, 185, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
@@ -197,6 +197,12 @@ p {
     display: none;
 }
 
+footer{
+    margin-top: 10vh;
+    height: 20vh;
+    background-color: var(--separator-color);
+}
+
 #background_image {
     position: absolute;
     top: 0;
@@ -232,21 +238,11 @@ h3{
 
 h4{
     font-size: var(--h4);
+    font-weight: normal;
     padding-left: calc(10% + 2em);}
 
 h3:target, h4:target {
     scroll-margin-top: 4em;
-}
-
-
-.glass .p{
-    font-size: var(--text);
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1em;
-    cursor: default;
-    padding-left: 2em;
-    padding-right: 2em;
 }
 
 .paragraph{
@@ -268,8 +264,8 @@ h3:target, h4:target {
 }
 
 .separator{
-    margin-top: 2em;
-    left: -20%;
+    position: relative;
+    left: -40%;
     width: 150%;
     height: 5em;
     background-color: var(--separator-color);
@@ -337,4 +333,16 @@ h3:target, h4:target {
     color: var(--text-color);
     text-align:center;
     vertical-align:middle;
+}
+
+#forum{
+    background-image: url("../assets/pictures/forum_romain.png");
+    min-height: 75vh;
+    position: relative;
+    left: -10%;
+    width: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
