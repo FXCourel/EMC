@@ -276,6 +276,16 @@ h3:target, h4:target {
     scroll-margin-top: 4em;
 }
 
+#main-title{
+    font-size: 27px;
+    padding: 0;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--extra-color);
+    text-underline-offset: 4px;
+    margin-bottom: 2em;
+}
+
 .paragraph{
     width: 90%;
     margin-left: auto;
@@ -372,11 +382,11 @@ h3:target, h4:target {
     vertical-align:middle;
 }
 
-#forum{
-    background-image: url("../assets/pictures/forum_romain.png");
+#catilina{
+    background-image: url("../assets/pictures/senat-romain-chute-republique-romaine-cesare.jpg");
     min-height: 75vh;
     position: relative;
-    left: -10%;
+    left: -10vw;
     width: 100vw;
     background-attachment: fixed;
     background-position: center;
