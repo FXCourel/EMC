@@ -14,6 +14,7 @@
     --h3 : 24px;
     --h4 : 21px;
     --text : 17px;
+    --small : 15px;
     --notes : 12px;
 }
 
@@ -229,12 +230,6 @@ p {
     display: none;
 }
 
-footer{
-    margin-top: 10vh;
-    height: 20vh;
-    background-color: var(--separator-color);
-}
-
 #background_image {
     position: absolute;
     top: 0;
@@ -390,12 +385,20 @@ h4:target{
 
 .large-img{
     position: relative;
-    left: -7.5vw;
+    left: -8.5vw;
     width: 100vw;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.large-img > a{
+    position: absolute;
+    bottom: 1em;
+    right: 2em;
+    font-size: var(--notes);
+    color: #0a0a0a;
+    font-weight: bold;
 }
 
 #catilina{
@@ -411,4 +414,24 @@ h4:target{
 #elysee{
     background-image: url("../assets/pictures/Comment-l-Elysee-va-se-deconfiner.jpg");
     min-height: 70vh;
+}
+
+#bourbon{
+    background-image: url("../assets/pictures/Palais_bourbon.jpg");
+    min-height: 70vh;
+}
+
+footer{
+    margin-top: 10vh;
+    height: 20vh;
+    background-color: var(--separator-color);
+    position: relative;
+}
+
+footer > p{
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+    font-size: var(--small);
+    color: var(--secondary-color);
 }

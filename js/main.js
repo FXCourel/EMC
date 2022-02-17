@@ -49,13 +49,13 @@ function setContent(content){
 
 
 triggeron.addEventListener('mouseover', () => {
-	if (localStorage.content === "Dvpt") {
+	if (localStorage.content === "Dvpt" || localStorage.content === "Conclu") {
 		header.style.top = '0';
 		part_overlay.style.top = '12vh';
 	};
 });
 triggeroff.addEventListener('mouseover', () => {
-	if (localStorage.content === "Dvpt" && window.pageYOffset >= fixed) {
+	if ((localStorage.content === "Dvpt" || localStorage.content === "Conclu") && window.pageYOffset >= fixed) {
 		header.style.top = 'calc(-12vh - 1px)';
 		part_overlay.style.top = '-1px';
 	};
@@ -63,7 +63,7 @@ triggeroff.addEventListener('mouseover', () => {
 
 
 function reloadMenu(){
-	if (localStorage.content === "Dvpt" && window.pageYOffset >= fixed) {
+	if ((localStorage.content === "Dvpt" || localStorage.content === "Conclu") && window.pageYOffset >= fixed) {
 			header.style.top = 'calc(-12vh - 1px)';
 			part_overlay.style.top = '-1px';
 		} else {
