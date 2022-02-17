@@ -282,13 +282,14 @@ h4:target{
 }
 
 #main-title{
-    font-size: 27px;
+    font-size: 30px;
     padding: 0;
     text-align: center;
     text-decoration: underline;
     text-decoration-color: var(--extra-color);
     text-underline-offset: 4px;
-    margin-bottom: 2em;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 .paragraph{
@@ -332,7 +333,7 @@ h4:target{
 .glass:hover {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    transform: scale(1.02);
+    transform: scale(1.02) translateZ(0);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -387,14 +388,27 @@ h4:target{
     vertical-align:middle;
 }
 
-#catilina{
-    background-image: url("../assets/pictures/senat-romain-chute-republique-romaine-cesare.jpg");
-    min-height: 75vh;
+.large-img{
     position: relative;
-    left: -10vw;
+    left: -7.5vw;
     width: 100vw;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#catilina{
+    background-image: url("../assets/pictures/senat-romain-chute-republique-romaine-cesare.jpg");
+    min-height: 75vh;
+}
+
+#acropole{
+    background-image: url("../assets/pictures/acropole.png");
+    min-height: 75vh;
+}
+
+#elysee{
+    background-image: url("../assets/pictures/Comment-l-Elysee-va-se-deconfiner.jpg");
+    min-height: 70vh;
 }
