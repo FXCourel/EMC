@@ -9,21 +9,18 @@
 }
 
 @font-face {
+    font-family: raleway;
+    font-weight: bold;
+    src: url("../assets/fonts/Raleway/Raleway-Bold.ttf");
+}
+
+@font-face {
+    font-family: raleway;
+    font-style: italic;
+    src: url("../assets/fonts/Raleway/Raleway-Italic.ttf");
+}
+
+@font-face {
     font-family: raleway-extralight;
     src: url("../assets/fonts/Raleway/Raleway-ExtraLight.ttf");
-}
-
-@font-face {
-    font-family: roboto;
-    src: url("../assets/fonts/Roboto/Roboto-Light.ttf");
-}
-
-@font-face {
-    font-family: roboto-bold;
-    src: url("../assets/fonts/Roboto/Roboto-Medium.ttf");
-}
-
-@font-face {
-    font-family: andalus;
-    src: url("../assets/fonts/andlso.ttf");
 }

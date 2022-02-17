@@ -1,14 +1,37 @@
-:root{
+:root, :root.dark{
     --text-color : #e2e2e2;
     --text-color-hover : #f2f2f2;
     --background-color : #2b2928;
-    --background-color-header : #e4e4e4;
     --secondary-color : #c5c5c5;
     --border-color : #d4d4d4;
     --separator-color: #222;
     --extra-color: #35b5f0;
     --th: #184a6180;
     --td: #1e2a3080;
+    --theme-btn: #1a1918;
+    --overlay-menu: rgb(255,255,255);
+    --overlay-menu-gra: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    --h1 : 35px;
+    --h2 : 35px;
+    --h3 : 24px;
+    --h4 : 21px;
+    --text : 17px;
+    --small : 15px;
+    --notes : 12px;
+}
+:root.light{
+    --text-color : #111111;
+    --text-color-hover : #f2f2f2;
+    --background-color : #e4e2e0;
+    --secondary-color : #9b9b9b;
+    --border-color : #969696;
+    --separator-color: #c4c4c4;
+    --extra-color: #35b5f0;
+    --th: #2e789b80;
+    --td: #79a4b980;
+    --theme-btn: #e9e4de;
+    --overlay-menu: rgb(50,50,50);
+    --overlay-menu-gra: linear-gradient(90deg, rgba(50,50,50,0) 0%, rgba(50,50,50,1) 50%, rgba(50,50,50,0) 100%);
     --h1 : 35px;
     --h2 : 35px;
     --h3 : 24px;
@@ -105,8 +128,8 @@ body{
     position: absolute;
     height: 12vh;
     top: 0;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    background: var(--overlay-menu);
+    background: var(--overlay-menu-gra);
     z-index: -1;
     transition: 0.3s ease left, width, opacity;
 	opacity: 0;
@@ -133,6 +156,38 @@ body{
     transition: all 0.5s;
 }
 
+#themeBtn{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    content: url("../assets/pictures/contrast.png");
+    background-color: var(--theme-btn);
+    border-left: var(--border-color) solid 1px;
+    border-top: var(--border-color) solid 1px;
+    border-radius: 10px 0 0 0;
+    transition: border-radius 0.15s;
+    z-index: 1;
+}
+#climbBtn{
+    position: fixed;
+    bottom: 50px;
+    right: -52px;
+    height: 50px;
+    width: 50px;
+    content: url("../assets/pictures/scroll.png");
+    background-color: var(--theme-btn);
+    border-left: var(--border-color) solid 1px;
+    border-top: var(--border-color) solid 1px;
+    border-radius: 10px 0 0 0;
+    transition: ease 0.15s;
+    z-index: 1;
+}
+#themeBtn:hover, #climbBtn:hover{
+    cursor: pointer;
+}
+
 a{
     text-decoration: none;
     outline: none;
@@ -144,7 +199,7 @@ p {
     cursor: default;
     padding-left: 2em;
     padding-right: 2em;
-    font-family: roboto;
+    font-family: raleway;
     line-height: 1.5em;
     text-indent: 2em;
 }
@@ -431,7 +486,7 @@ footer{
 footer > p{
     position: absolute;
     bottom: 0.5em;
-    right: 0.5em;
+    right: calc(0.5em + 50px);
     font-size: var(--small);
     color: var(--secondary-color);
 }

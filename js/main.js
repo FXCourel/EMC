@@ -1,4 +1,5 @@
 var actual_content;
+const html = document.querySelector('#page')
 const part_overlay = document.querySelector('#part-overlay')
 const Intro = document.querySelector('#Intro');
 const Dvpt = document.querySelector('#Dvpt');
@@ -12,6 +13,8 @@ const overlay = document.querySelector('.header #menu-overlay');
 const nav_list = document.querySelectorAll('.header .menu');
 const wrap = document.querySelector('#main_wrap');
 const parties = document.querySelectorAll('#Dvpt section');
+const themeBtn = document.querySelector('#themeBtn');
+const climbBtn = document.querySelector('#climbBtn');
 const fixed = header.clientHeight;
 
 function setContent(content){
@@ -19,7 +22,6 @@ function setContent(content){
 	if(actual_content === content){
 		return false;
 	}	
-	console.log("Changing content to",content)
 	actual_content = content;
 	if(content == "Intro") {
 		Intro.style.display = 'block';
@@ -64,12 +66,42 @@ triggeroff.addEventListener('mouseover', () => {
 
 function reloadMenu(){
 	if ((localStorage.content === "Dvpt" || localStorage.content === "Conclu") && window.pageYOffset >= fixed) {
-			header.style.top = 'calc(-12vh - 1px)';
-			part_overlay.style.top = '-1px';
+		header.style.top = 'calc(-12vh - 1px)';
+		part_overlay.style.top = '-1px';
+	} else {
+		header.style.top = '0';
+		part_overlay.style.top = '12vh'
+	};
+	if (window.pageYOffset == 0){
+		climbBtn.style.right = '-52px';
+		themeBtn.style.borderRadius = '10px 0 0 0';
+	} else {
+		climbBtn.style.right = '0px';
+		themeBtn.style.borderRadius = '0 0 0 0';
+	}
+	
+}
+
+function setTheme(mode){
+	if (mode === 'toggle'){
+		if (localStorage.theme === 'Dark'){
+			localStorage.theme = 'Light';
+			html.classList.remove('dark');
+			html.classList.add('light');
 		} else {
-			header.style.top = '0';
-			part_overlay.style.top = '12vh'
-		};
+			localStorage.theme = 'Dark';
+			html.classList.remove('light');
+			html.classList.add('dark');
+		}
+	} else if (mode === 'Dark'){
+		localStorage.theme = 'Dark';
+		html.classList.remove('light');
+		html.classList.add('dark');
+	} else if (mode === 'Light'){
+		localStorage.theme = 'Light';
+		html.classList.remove('dark');
+		html.classList.add('light');
+	};
 }
 
 nav_list.forEach((list) => {
@@ -88,6 +120,12 @@ if(localStorage.content){
 	setContent(localStorage.content);
 }else{
 	setContent("Intro");
+}
+
+if(localStorage.theme){
+	setTheme(localStorage.theme);
+}else{
+	setTheme('Dark');
 }
 
 reloadMenu();
